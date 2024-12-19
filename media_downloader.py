@@ -27,16 +27,6 @@ def download_twitter_video(link_from_user):
 
         time.sleep(15)
 
-
-
-        # submit_button = WebDriverWait(driver, 10).until(EC.presence_of_element_located([By.ID, "submit"]))
-        # action = ActionChains(driver)
-        # action.click(submit_button).perform()
-
-        # WebDriverWait(driver, 20).until(EC.url_changes(driver.current_url))
-
-        # download_button = WebDriverWait(driver, 10).until(EC.presence_of_element_located([By.PARTIAL_LINK_TEXT, "Download"]))
-
         download_button = driver.find_element(By.XPATH, "/html/body/section[1]/div/div/div/div/div[1]/table/tbody/tr[2]/td[2]/a")
 
         download_link = download_button.get_attribute("href")
@@ -101,8 +91,6 @@ def download_linkedin_media(link):
 
         elem.send_keys(Keys.ENTER)
 
-        # link_button = WebDriverWait(driver,15).until(EC.presence_of_element_located([By.XPATH, "//*[@id='showdata']/div[4]/table/tbody/tr/td[1]/a"]))
-
         time.sleep(20)
 
         link_button = driver.find_element(By.XPATH, "//*[@id='showdata']/div[4]/table/tbody/tr/td[1]/a")
@@ -136,8 +124,6 @@ def download_tiktok_video(link):
 
         elem.send_keys(Keys.ENTER)
 
-        # link_button = WebDriverWait(driver, 15).until(EC.presence_of_element_located([By.XPATH, "//*[@id='dl_btns']/a[1]"]))
-        
         time.sleep(15)
 
         link_button = driver.find_element(By.XPATH, "//*[@id='download']/div/div[2]/a[1]")
@@ -172,8 +158,6 @@ def download_tiktok_audio(link):
 
         elem.send_keys(Keys.ENTER)
 
-        # link_button = WebDriverWait(driver, 15).until(EC.presence_of_element_located([By.XPATH, "//*[@id='dl_btns']/a[4]"]))
-
         time.sleep(15)
 
         link_button = driver.find_element(By.XPATH, "//*[@id='dl_btns']/a[4]")
@@ -207,8 +191,6 @@ def download_pinterest_video(link):
 
         elem.send_keys(Keys.ENTER)
 
-        # download_button = WebDriverWait(driver,20).until(EC.presence_of_element_located([By.XPATH, "//*[@id='video_down']"]))
-
         time.sleep(20)
 
         download_button = driver.find_element(By.XPATH, "//*[@id='video_down']")
@@ -241,9 +223,7 @@ def download_facebook_video(link):
         elem.send_keys(link)
 
         elem.send_keys(Keys.ENTER)
-
-        # download_button = WebDriverWait(driver,20).until(EC.presence_of_element_located([By.XPATH, "//*[@id='fbdownloader']/div[1]/div[1]/table/tbody/tr[1]/td[3]/a"]))
-
+        
         time.sleep(20)
 
         download_button = driver.find_element(By.XPATH, "//*[@id='fbdownloader']/div[1]/div[1]/table/tbody/tr[1]/td[3]/a")
