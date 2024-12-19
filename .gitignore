@@ -1,0 +1,5 @@
+__pycache__/
+smdenv/
+.env
+try.py
+update.txt
